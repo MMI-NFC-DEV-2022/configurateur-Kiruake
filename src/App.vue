@@ -1,10 +1,23 @@
 <script setup lang="ts">
+import router from "./router";
 
 import SvgProfil from "./components/SvgProfil.vue";
 
 </script>
 
 <template>
-  <h1 class="text-red-500">test</h1>
-  <SvgProfil semelle="red"/>
+  
+  <nav>
+
+<ul class="flex gap-1 bg-grey-200">
+<RouterLink to="/form">Formulaire</RouterLink>    
+<RouterLink to="/">Accueil</RouterLink>
+</ul>
+
+</nav>
+
+  <Suspense>
+    <RouterView />
+    </Suspense>
+
 </template>

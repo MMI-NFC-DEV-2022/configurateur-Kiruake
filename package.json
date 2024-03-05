@@ -11,9 +11,10 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@formkit/vue": "^1.5.9",
     "@headlessui/tailwindcss": "^0.2.0",
     "vue": "^3.4.15",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
@@ -25,7 +26,9 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "~5.3.0",
+    "unplugin-vue-router": "^0.8.4",
     "vite": "^5.0.11",
+    "vite-plugin-pages": "^0.32.0",
     "vue-tsc": "^1.8.27"
   }
 }
