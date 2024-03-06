@@ -4,7 +4,15 @@ import { ref } from "vue";
 import { FormKit }  from "@formkit/vue";
 import BasketProfil from "./BasketProfil.vue";
 import BasketDessus from "./BasketDessus.vue";
-const chaussure = ref<Basket>({});
+
+const props = defineProps<{
+  data?: Basket;
+  id?: string;
+}>();
+
+const chaussure = ref<Basket>(props.data ?? {});
+
+
 
 </script>
 <template>
