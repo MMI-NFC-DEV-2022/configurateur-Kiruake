@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import router from "./router";
 
-import SvgProfil from "./components/SvgProfil.vue";
+import BasketProfil from "./components/BasketProfil.vue";
 
 </script>
 
@@ -12,6 +12,7 @@ import SvgProfil from "./components/SvgProfil.vue";
 <ul class="flex gap-1 bg-grey-200">
 <RouterLink to="/form">Formulaire</RouterLink>    
 <RouterLink to="/">Accueil</RouterLink>
+<RouterLink to="/pageimages">Images</RouterLink>
 </ul>
 
 </nav>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { ChaussureSvg } from '@/types-svg';
-withDefaults(defineProps<ChaussureSvg>(), {
+import type { Basket } from '@/types';
+withDefaults(defineProps<Basket>(), {
     semelle: "white",
   empeigne: "white",
   pointe: "white",
@@ -49,4 +49,4 @@ withDefaults(defineProps<ChaussureSvg>(), {
     <path d="M179.82,40.17l23.09.29,60.65-10.22s15.15,16.94,14.59,27.19c0,0,1,6.76-5.1,9.77l-3-.28-1.23-.11-2.35-7.63-2.86.88-2.86-.88-2.13,6.89-12.28-.48-2-6.41-2.7.84L239,59.19l-2,6.35-10,.22-2.32.08-2.06-6.66-3.29,1-3.29-1L214,65.79,201.87,65l-2.13-5.77-3,.93L194,59.25l-1.38,4.47-4.4-.76Z" transform="translate(-13.07 -25.23)" :fill="trimestre" stroke="black" stroke-width="3" stroke-miterlimit="10" class="trimestre"></path>
     <path d="M172,159.29l35.9,2a305.6,305.6,0,0,0,55.65,3s24.55-11.61,11-36.68l-6.11.42-2,6.54-3-.92-2.85.88-1.8-5.84-12.81.88-1.54,5-2.77-.85-2.77.85-1.36-4.39-13.8.92-1.07,3.48-3.35-1-3.32,1-.9-2.89-14.75.88-.58,2-3-.91-2.85.88-.43-1.41-9.17.61S180.88,151.67,172,159.29Z" transform="translate(-13.07 -25.23)" :fill="trimestre" stroke="black" stroke-width="3" stroke-miterlimit="10" class="trimestre"></path>
     </svg>
-</template>
+</template>@/types

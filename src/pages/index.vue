@@ -2,12 +2,12 @@
 
 <h1 class="text-red-500">test</h1>
 
-<SvgProfil semelle="red" lacet="yellow"/>
+<BasketProfil semelle="red" lacet="yellow"/>
 
 </template>
 
 <script setup lang="ts">
 
-import SvgProfil from "@/components/SvgProfil.vue";
+import BasketProfil from "@/components/BasketProfil.vue";
 
 </script>

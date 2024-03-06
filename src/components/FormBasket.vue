@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { ChaussureSvg } from "@/types-svg";
+import type { Basket } from "@/types";
 import { ref } from "vue";
 import { FormKit }  from "@formkit/vue";
-import SvgProfil from "./SvgProfil.vue";
-import SvgDessus from "./SvgDessus.vue";
-const chaussure = ref<ChaussureSvg>({});
+import BasketProfil from "./BasketProfil.vue";
+import BasketDessus from "./BasketDessus.vue";
+const chaussure = ref<Basket>({});
 
 </script>
 <template>
@@ -17,8 +17,8 @@ const chaussure = ref<ChaussureSvg>({});
 </ul>
 
 <div class="carousel w-64">
-<SvgProfil class="carousel-item w-64" v-bind="chaussure" id="profil" />
-<SvgDessus class="carousel-item w-64" v-bind="chaussure" id="dessus"/>
+<BasketProfil class="carousel-item w-64" v-bind="chaussure" id="profil" />
+<BasketDessus class="carousel-item w-64" v-bind="chaussure" id="dessus"/>
 </div>
 
 <FormKit type="form" v-model="chaussure">
