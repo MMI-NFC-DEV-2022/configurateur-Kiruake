@@ -1,16 +1,30 @@
 <script setup lang="ts">
 import BasketProfil from "../components/BasketProfil.vue";
 import type { Basket } from "../types";
-const exemple0: Basket = {
-  semelle: "#FF0000",
-  empeigne: "#FFFFFF",
-  pointe: "#FFFFFF",
-  oeillet: "#FFFFFF",
-  bande: "#00FF00",
-  languette: "#FFFFFF",
-  lacet: "#00FF00",
-  trimestre: "#FFFFFF",
-};
+
+const exemples: Basket[] = [
+    {
+        semelle: "#FF0000",
+        empeigne: "#FFFFFF",
+        pointe: "#FFFFFF",
+        oeillet: "#FFFFFF",
+        bande: "#00FF00",
+        languette: "#FFFFFF",
+        lacet: "#00FF00",
+        trimestre: "#FFFFFF",
+    },
+    
+    {
+        semelle: "#FFFFFF",
+        empeigne: "#00FF00",
+        pointe: "#FFFFFF",
+        oeillet: "#FFFFFF",
+        bande: "#00FF00",
+        languette: "#FFFFFF",
+        lacet: "#000000",
+        trimestre: "#FFFFFF",
+    },
+];
 </script>
 <template>
   <section>
@@ -18,12 +32,13 @@ const exemple0: Basket = {
     <div class="flex flex-wrap gap-2">
       <div class="w-64">
         <RouterLink
+        v-for="(exemple, index) in exemples" :key="index"
           :to="{
             name: '/basket/exemple/[data]',
-            params: { data: JSON.stringify(exemple0) },
+            params: { data: JSON.stringify(exemple) },
           }"
         >
-          <BasketProfil  class="w-64" v-bind="exemple0" />
+        <BasketProfil class="w-64" v-bind="exemple" />
         </RouterLink>
       </div>
     </div>

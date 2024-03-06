@@ -10,7 +10,7 @@ const props = defineProps<{
   id?: string;
 }>();
 
-const chaussure = ref<Basket>(props.data ?? {});
+const chaussure = ref<Basket>({...props.data} ?? {});
 
 
 
