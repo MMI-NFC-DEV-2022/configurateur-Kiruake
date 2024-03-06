@@ -48,7 +48,31 @@ class="h-6 w-6 rounded-full"
 
 </FormKit>
 
-<FormKit name="oeillet" label="oeillet" value="#FFFFFF" type="radio" :options="colors" />
+<FormKit
+
+name="oeillet"
+label="oeillet"
+value="#FFFFFF"
+type="radio"
+:options="colors"
+:sections-schema="{
+    inner: { $el: null },
+    decorator: { $el: null },
+}"
+input-class="peer sr-only"
+options-class="flexgap-1"
+>
+
+<template #label="context">
+<div
+    class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+    :style="{ backgroundColor: context.option.value }"
+>
+</div>
+<span class="sr-only">{{context.option.label}}</span>
+</template>
+</FormKit>
+
 <FormKit name="bande" label="bande" value="#FFFFFF" type="radio" :options="colors" />
 <FormKit name="languette" label="languette" value="#FFFFFF" type="radio" :options="colors" />
 <FormKit name="lacet" label="lacet" value="#FFFFFF" type="radio" :options="colors" />
