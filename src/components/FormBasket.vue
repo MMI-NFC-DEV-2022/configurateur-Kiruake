@@ -2,6 +2,7 @@
 import type { Basket } from "@/types";
 import { ref } from "vue";
 import { FormKit }  from "@formkit/vue";
+import { colors } from "@/types";
 import BasketProfil from "./BasketProfil.vue";
 import BasketDessus from "./BasketDessus.vue";
 
@@ -11,6 +12,7 @@ const props = defineProps<{
 }>();
 
 const chaussure = ref<Basket>({...props.data} ?? {});
+
 
 
 
@@ -30,14 +32,14 @@ const chaussure = ref<Basket>({...props.data} ?? {});
 </div>
 
 <FormKit type="form" v-model="chaussure">
-<FormKit name="semelle" label="semelle" value="#FFFFFF" type="color" />
-<FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="color" />
-<FormKit name="pointe" label="pointe" value="#FFFFFF" type="color" />
-<FormKit name="oeillet" label="oeillet" value="#FFFFFF" type="color" />
-<FormKit name="bande" label="bande" value="#FFFFFF" type="color" />
-<FormKit name="languette" label="languette" value="#FFFFFF" type="color" />
-<FormKit name="lacet" label="lacet" value="#FFFFFF" type="color" />
-<FormKit name="trimestre" label="trimestre" value="#FFFFFF" type="color" />
-</FormKit>
+<FormKit name="semelle" label="semelle" value="#FFFFFF" type="select" :options="colors" />
+<FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="select" :options="colors" />
+<FormKit name="pointe" label="pointe" value="#FFFFFF" type="select" :options="colors" />
+<FormKit name="oeillet" label="oeillet" value="#FFFFFF" type="select" :options="colors" />
+<FormKit name="bande" label="bande" value="#FFFFFF" type="select" :options="colors" />
+<FormKit name="languette" label="languette" value="#FFFFFF" type="select" :options="colors" />
+<FormKit name="lacet" label="lacet" value="#FFFFFF" type="select" :options="colors" />
+<FormKit name="trimestre" label="trimestre" value="#FFFFFF" type="select":options="colors" />
+</FormKit> 
 </div>
 </template>
