@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import BasketProfil from "../components/BasketProfil.vue";
+import BasketProfil from "@/components/BasketProfil.vue";
 import { supabase } from "@/supabase";
-import type { Basket } from "../types";
+import type { Basket } from "@/types";
 
 console.log("supabase: ", supabase);
 
